@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp1.CompressionAlgorithms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="CompressionAlgorithms" Height="450" Width="800">
+    <Grid Background="#1C1D21">
+
+        <Border CornerRadius="5"  MinWidth="50" Height="15" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock Foreground="#C0C5CE" TextAlignment="Center" FontSize="14">Ввод текста</TextBlock>
+        </Border>
+
+        <Border CornerRadius="15"  Background="#C0C5CE" MinHeight="50" Margin="30 50 150 0" VerticalAlignment="Top">
+            <TextBox TextWrapping="Wrap" BorderThickness="0" Padding="10" Foreground="#1C1D21" Background="Transparent" Name="Input"></TextBox>
+        </Border>
+
+        <Border CornerRadius="15"  Background="#C0C5CE" Height="50" Margin="0 50 30 0" Padding="10" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button BorderThickness="0" Foreground="#1C1D21" Background="Transparent" Click="CompressButton" FontSize="14">Сжать текст</Button>
+        </Border>
+
+
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Border  VerticalAlignment="Top" CornerRadius="5"  Background="#C0C5CE" MinWidth="50" MinHeight="15" Margin="30 150 30 50">
+                <TextBox Padding="5 0" BorderThickness="0" Foreground="#1C1D21" Background="Transparent" TextAlignment="Center" Name="LZ77field"></TextBox>
+            </Border>
+
+            <TextBlock Foreground="#C0C5CE" Background="Transparent" VerticalAlignment="Bottom" TextAlignment="Center" MinWidth="50" Height="15" Margin="30" >LZ77</TextBlock>
+            
+        </Grid>
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Border  VerticalAlignment="Top" CornerRadius="5"  Background="#C0C5CE" MinWidth="50" MinHeight="15" Margin="30 150 30 50">
+                
+                <TextBox Padding="5 0" BorderThickness="0" Foreground="#1C1D21" Background="Transparent" TextAlignment="Center" Name="LZ78field"></TextBox>
+            </Border>
+
+            <TextBlock Foreground="#C0C5CE" Background="Transparent" VerticalAlignment="Bottom" TextAlignment="Center" MinWidth="50" Height="15" Margin="30" >LZ78</TextBlock>
+
+        </Grid>
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Border VerticalAlignment="Top" CornerRadius="5"  Background="#C0C5CE" MinWidth="50" MinHeight="15" Margin="30 150 30 50">
+                <TextBox Padding="5 0" BorderThickness="0" Foreground="#1C1D21" Background="Transparent" TextAlignment="Center" Name="LZSSfield"></TextBox>
+            </Border>
+
+            <TextBlock Foreground="#C0C5CE" Background="Transparent" VerticalAlignment="Bottom" TextAlignment="Center"  MinWidth="50" Height="15" Margin="30" >LZSS</TextBlock>
+        </Grid>
+
+
+
+    </Grid>
+</Window>

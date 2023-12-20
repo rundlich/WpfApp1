@@ -1,0 +1,70 @@
+﻿<Window x:Class="WpfApp1.Graphs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Graphs" MinHeight="350" MinWidth="800"
+        SizeToContent="WidthAndHeight"
+        >
+    <Grid Background="#1C1D21">
+        <Grid HorizontalAlignment="Left" Width="300">
+            <TextBlock Foreground="#C0C5CE" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30">Введите начало и конец графа</TextBlock>
+            <Border CornerRadius="15" Background="#C0C5CE" Width="50" Height="50" Margin="80 50 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBox BorderThickness="0" Background="Transparent" TextAlignment="Center" Foreground="#1C1D21" Name="InputBegin"/>
+            </Border>
+            <Border CornerRadius="15"  Background="#C0C5CE" Width="50" Height="50" Margin="170 50 0 0"  HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBox BorderThickness="0" Background="Transparent" TextAlignment="Center" Foreground="#1C1D21" Name="InputEnd"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Width="200" Height="80"  Margin="50 110 " HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button BorderThickness="0" Foreground="#1C1D21" Background="Transparent" Click="AddButton" >Добавить</Button>
+            </Border>
+            <TextBlock Foreground="#C0C5CE" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 197 0 0">Введенные графы</TextBlock>
+            <Border CornerRadius="20" Background="#C0C5CE" Padding="15" MinHeight="70"  MaxHeight="700" Width="200" Margin="50 220 50 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock TextAlignment="Center" Foreground="#1C1D21" Name="EnteredGrapghs"/>
+            </Border>
+        </Grid>
+        <Grid  Margin="300 50 50 50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">Ориентированный граф</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="0" Grid.Row="1">Список смежности</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="1" Grid.Row="1">Матрица смежности</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="2" Grid.Row="1">Матрица инцедентности</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">Неориентированный граф</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="0" Grid.Row="4">Список смежности</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="1" Grid.Row="4">Матрица смежности</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="#C0C5CE" Grid.Column="2" Grid.Row="4">Матрица инцедентности</TextBlock>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="0" Grid.Row="2" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputDirectedAdjacencyList"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="1" Grid.Row="2" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputDirectedAdjacencyMatrix"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="2" Grid.Row="2" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputDirectedIncidenceMatrix"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="0" Grid.Row="5" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputAdjacencyList"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="1" Grid.Row="5" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputAdjacencyMatrix"/>
+            </Border>
+            <Border CornerRadius="20" Background="#C0C5CE" Grid.Column="2" Grid.Row="5" Margin="30" Padding="15">
+                <TextBlock Foreground="#1C1D21" Name="OutputIncidenceMatrix"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
